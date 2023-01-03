@@ -1,0 +1,36 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
+/* Variables */
+
+:root {
+  --clr-primary-5: #49a6e9;
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-white: #fff;
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --fixed-width: 620px;
+}
+
+/* Modal */
+
+.hero {
+  min-height: 100vh;
+  background: url('./hero.jpg') center/cover no-repeat;
+  display: grid;
+  place-items: center;
+}
+.banner {
+  background: var(--clr-white);
+  padding: 4rem 0;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  text-align: center;
+  width: 90vw;
+  max-width: var(--fixed-width);
+}
