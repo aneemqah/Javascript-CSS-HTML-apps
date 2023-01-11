@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+h1 {
+    padding-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.image-grid {
+  --gap: 16px;
+  --num-cols: 4;
+  --row-height: 300px;
+  box-sizing: border-box;
+  padding: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(grid-auto-rows);
+  gap: var(--gap);
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+/* Set images to take up the entire width and height of their grid cell  */
+.image-grid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Anything under */
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        --num-cols:2
+        --row-height: 200px
+    }
+}
